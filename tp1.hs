@@ -1,6 +1,9 @@
-data Heroe = Heroe { hnombre :: String, hpoder :: Int, hvida :: Int}
-data Villano = Villano { vnombre :: String, vpoder :: Int, vvida :: Int}
+data Super = Heroe { nombre :: String, poder :: Float, vida :: Float} | Villano { nombre :: String, poder :: Float, vida :: Float, maldad :: Float}
 
-hero1 = Heroe {hnombre = "batman", hpoder = 2000, hvida = 300000}
+participantes = [Heroe "batman" 2000 300000, Villano "megamente" 1800 50000 9000, Heroe "ironman" 1500 5030202, Heroe "Goku" 100000000000000 1010101010110101010, Heroe "KungFu Panda" 20  202020202, Villano "Pinguino" 1010 20202020202 253]
 
-main = putStrLn (hnombre hero1)
+poderReal (Heroe _ poder _) = poder
+poderReal (Villano _ poder _ maldad) = poder - (maldad / 6)
+
+megamente = Villano "megamente" 1800 50000 9000
+main = putStrLn (show (poderReal megamente))
