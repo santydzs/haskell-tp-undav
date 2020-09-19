@@ -5,5 +5,7 @@ participantes = [Heroe "batman" 2000 300000, Villano "megamente" 1800 50000 9000
 poderReal (Heroe _ poder _) = poder
 poderReal (Villano _ poder _ maldad) = poder - (maldad / 6)
 
+over9000 = (9000<).poderReal
+
 megamente = Villano "megamente" 1800 50000 9000
-main = putStrLn (show (poderReal megamente))
+main = putStrLn (show (over9000 megamente))
