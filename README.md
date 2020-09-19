@@ -1,8 +1,6 @@
 ## Steps to compile this project
 
-ghc -o tp1 tp1.hs
-
-
+ghc tp1.hs
 
 ## How to run?
 
