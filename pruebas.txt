@@ -1,0 +1,90 @@
+Pruebas para el punto 2:
+
+	punto2testA = (poderReal batman) == 1000.0 
+	punto2testB = poderReal megamente == 1499
+	punto2testD = poderReal joker == 0
+
+Datos utilizados para la prueba:
+
+	batman = Heroe "batman" 1000 5000
+	megamente = Villano "megamente" 1500 10000 6
+	joker = Villano "joker" 500 1000 3000
+	
+----------------------------------------------------------
+Pruebas para el punto 3:
+
+	punto3testA = over9000 batman == False
+	punto3testB = over9000 thanos == True
+	punto3testC = over9000 joker == False
+
+Datos utilizados para el punto 3
+
+	batman = Heroe "batman" 1000 5000
+	thanos = Villano "thanos" 1000000 10000 1000
+	joker = Villano "joker" 500 1000 3000
+	
+-----------------------------------------------------------
+Pruebas para el punto 4:
+
+	punto4testA = vida (golpear batman thanos) == 9000.0
+	punto4testB = vida (golpear thanos ironman) == 4030368.8 
+	punto4testC = vida (golpear batman ironman) == 5029202.0
+
+Datos utilizados para el punto 4:
+	batman = Heroe "batman" 1000 5000
+	thanos = Villano "thanos" 1000000 10000 1000
+	ironman = Heroe "ironman" 1500 5030202
+
+-----------------------------------------------------------
+Pruebas para el punto 5:
+	
+	punto5testA = ganadorCombate batman thanos
+	punto5testB = ganadorCombate joker batman
+	punto5testC = ganadorCombate superman ironman
+
+Datos utilizados para el punto 5:
+
+	batman = Heroe "batman" 1000 5000
+	superman = Heroe "superman" 1500 5000000
+	thanos = Villano "thanos" 1000000 10000 1000
+	joker = Villano "joker" 500 1000 3000
+	ironman = Heroe "ironman" 1500 5030202
+
+-------------------------------------------------------------
+Pruebas para el punto 6:
+
+	punto2testA = ataquePandilla joker pandilla1
+	punto2testB = ataquePandilla ironman pandilla2
+
+Datos utilizados para el punto 6:
+
+	pandilla1 = [superman,ironman,batman]
+	pandilla2 = [superman,thanos,batman]
+
+	batman = Heroe "batman" 1000 5000
+	superman = Heroe "superman" 1000 5030202
+	thanos = Villano "thanos" 1000000 10000 6
+	joker = Villano "joker" 500 5000 3000
+	ironman = Heroe "ironman" 1500 5030202
+	
+---------------------------------------------------------------
+Pruebas para el punto 7:
+
+	punto2testA = estadisticas over9000 pandilla1
+	punto2testB = estadisticas over9000 pandilla2
+
+	punto2testC = estadisticas (\ pandillero -> 0 < (vida (ataquePandilla pandillero (delete pandillero pandilla2)))) pandilla2
+	punto2testD = estadisticas (\ pandillero -> 0 < (vida (ataquePandilla pandillero (delete pandillero pandilla2)))) pandilla3
+
+Datos utilizados para el punto 7:
+
+	pandilla1 = [superman,ironman,goku]
+	pandilla2 = [ironman,joker,goku]
+	pandilla3 = [ironman,joker,goku,vegeta]
+
+	goku = Heroe "goku" 67888000 5000
+	superman = Heroe "superman" 10000 5030202
+	thanos = Villano "thanos" 1000000 10000 6
+	joker = Villano "joker" 500 5000 3000
+	ironman = Heroe "ironman" 1500 5030202
+	vegeta = Heroe "vegeta" 1000 77888000
