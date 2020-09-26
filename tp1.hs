@@ -32,25 +32,3 @@ ataquePandilla super pandilla = foldl (\ supergolpeado pandillero -> golpear pan
 --punto 7
 estadisticas :: (Super -> Bool) -> [Super] -> [String]
 estadisticas funcion lista = map nombre (filter funcion lista)
-
---test
-
---punto 7 preubas
-punto2testA = estadisticas over9000 pandilla1
-punto2testB = estadisticas over9000 pandilla2
-punto2testC = estadisticas (\ pandillero -> 0 < (vida (ataquePandilla pandillero (delete pandillero pandilla2)))) pandilla2
-punto2testD = estadisticas (\ pandillero -> 0 < (vida (ataquePandilla pandillero (delete pandillero pandilla2)))) pandilla3
-
-pandilla1 = [superman,ironman,goku]
-pandilla2 = [ironman,joker,goku]
-pandilla3 = [ironman,joker,goku,vegeta]
-
-goku = Heroe "goku" 67888000 5000
-superman = Heroe "superman" 10000 5030202
-thanos = Villano "thanos" 1000000 10000 6
-joker = Villano "joker" 500 5000 3000
-ironman = Heroe "ironman" 1500 5030202
-vegeta = Heroe "vegeta" 1000 77888000
-
-
-main = putStrLn (show punto2testD )
